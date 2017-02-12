@@ -17,7 +17,7 @@
 实验环境：WMware + Ubuntu-14.04.3-desktop-amd64。
 虚拟机配置1.在WMware中安装Ubuntu-14.04.32.配置Ubuntu root账号12$ sudo passwd root$ su - root
 3.安装 WMware tool1234567$ mkdir /mnt/cdrom$">
-<meta property="og:updated_time" content="2017-02-12T15:10:14.110Z">
+<meta property="og:updated_time" content="2017-02-12T15:24:37.959Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gem5安装配置">
 <meta name="twitter:description" content="由于实验需要，这些天尝试安装了gem5到虚拟机中，以下为安装记录。
@@ -98,12 +98,18 @@
 <p>实验环境：WMware + Ubuntu-14.04.3-desktop-amd64。</p>
 <h2 id="虚拟机配置"><a href="#虚拟机配置" class="headerlink" title="虚拟机配置"></a>虚拟机配置</h2><h3 id="1-在WMware中安装Ubuntu-14-04-3"><a href="#1-在WMware中安装Ubuntu-14-04-3" class="headerlink" title="1.在WMware中安装Ubuntu-14.04.3"></a>1.在WMware中安装Ubuntu-14.04.3</h3><h3 id="2-配置Ubuntu-root账号"><a href="#2-配置Ubuntu-root账号" class="headerlink" title="2.配置Ubuntu root账号"></a>2.配置Ubuntu root账号</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo passwd root</div><div class="line">$ su - root</div></pre></td></tr></table></figure>
 <h3 id="3-安装-WMware-tool"><a href="#3-安装-WMware-tool" class="headerlink" title="3.安装 WMware tool"></a>3.安装 WMware tool</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ mkdir /mnt/cdrom</div><div class="line">$ mnt /mnt/cdrom /dev/cdrom</div><div class="line">$ cp /mnt/cdrom/VMwareTools-8.4.6-385536.tar.gz ~/</div><div class="line">$ <span class="built_in">cd</span></div><div class="line">$ tar -xzvf VMwareTools-8.4.6-385536.tar.gz</div><div class="line">$ <span class="built_in">cd</span> vmware-tools-distrib</div><div class="line">$ ./vmware-install.pl</div></pre></td></tr></table></figure>
-<h2 id="安装gem5"><a href="#安装gem5" class="headerlink" title="安装gem5"></a>安装gem5</h2><p><a id="more"></a>#在<!--more-->之前的内容会显示在首页，之后的内容会被隐藏，当游客点击Read more才能看到。</p>
+<h2 id="root下安装gem5"><a href="#root下安装gem5" class="headerlink" title="root下安装gem5"></a>root下安装gem5</h2><h3 id="1-安装Mercurial版本控制软件，用于获取gem5代码"><a href="#1-安装Mercurial版本控制软件，用于获取gem5代码" class="headerlink" title="1. 安装Mercurial版本控制软件，用于获取gem5代码"></a>1. 安装Mercurial版本控制软件，用于获取gem5代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ apt-get install mercurial</div></pre></td></tr></table></figure>
+<h3 id="2-更新编译环境"><a href="#2-更新编译环境" class="headerlink" title="2. 更新编译环境"></a>2. 更新编译环境</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ apt-get install build-essential</div></pre></td></tr></table></figure>
+<h3 id="3-安装scon工具，该工具用于build-gem5工程"><a href="#3-安装scon工具，该工具用于build-gem5工程" class="headerlink" title="3. 安装scon工具，该工具用于build gem5工程"></a>3. 安装scon工具，该工具用于build gem5工程</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ apt-get install scons</div></pre></td></tr></table></figure>
+<h3 id="4-安装python"><a href="#4-安装python" class="headerlink" title="4. 安装python"></a>4. 安装python</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ apt-get install python-dev</div></pre></td></tr></table></figure>
+<h3 id="5-安装swig，swig用于将c-对象传给python配置文件"><a href="#5-安装swig，swig用于将c-对象传给python配置文件" class="headerlink" title="5. 安装swig，swig用于将c++对象传给python配置文件"></a>5. 安装swig，swig用于将c++对象传给python配置文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ apt-get install swig</div></pre></td></tr></table></figure>
+<h3 id="6-获得gem5-代码"><a href="#6-获得gem5-代码" class="headerlink" title="6. 获得gem5 代码"></a>6. 获得gem5 代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hg <span class="built_in">clone</span> http://repo.gem5.org/gem5-stable</div></pre></td></tr></table></figure>
+<p><a id="more"></a>#在<!--more-->之前的内容会显示在首页，之后的内容会被隐藏，当游客点击Read more才能看到。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/08/my-new-post/" data-id="ciz2t5q700000fc0g8b8ps42p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/02/08/my-new-post/" data-id="ciz2toqmj0000i00gi61zmxb3" class="article-share-link">Share</a>
       
       
     </footer>
