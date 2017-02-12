@@ -7,29 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="由于实验需要，这些天尝试安装了gem5到虚拟机中，以下为安装记录。
 实验环境：WMware + Ubuntu-14.04.3-desktop-amd64。
-##虚拟机配置
-###在WMware中安装Ubuntu-14.04.3
-###配置Ubuntu root账号12$ sudo passwd root$ su - root
-###安装 WMware tool1234567$ mkdir /mnt">
+虚拟机配置1.在WMware中安装Ubuntu-14.04.32.配置Ubuntu root账号12$ sudo passwd root$ su - root
+3.安装 WMware tool1234567$ mkdir /mnt/cdrom$">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gem5安装配置">
 <meta property="og:url" content="http://yoursite.com/2017/02/08/my-new-post/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="由于实验需要，这些天尝试安装了gem5到虚拟机中，以下为安装记录。
 实验环境：WMware + Ubuntu-14.04.3-desktop-amd64。
-##虚拟机配置
-###在WMware中安装Ubuntu-14.04.3
-###配置Ubuntu root账号12$ sudo passwd root$ su - root
-###安装 WMware tool1234567$ mkdir /mnt">
-<meta property="og:updated_time" content="2017-02-12T15:01:23.117Z">
+虚拟机配置1.在WMware中安装Ubuntu-14.04.32.配置Ubuntu root账号12$ sudo passwd root$ su - root
+3.安装 WMware tool1234567$ mkdir /mnt/cdrom$">
+<meta property="og:updated_time" content="2017-02-12T15:10:14.110Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gem5安装配置">
 <meta name="twitter:description" content="由于实验需要，这些天尝试安装了gem5到虚拟机中，以下为安装记录。
 实验环境：WMware + Ubuntu-14.04.3-desktop-amd64。
-##虚拟机配置
-###在WMware中安装Ubuntu-14.04.3
-###配置Ubuntu root账号12$ sudo passwd root$ su - root
-###安装 WMware tool1234567$ mkdir /mnt">
+虚拟机配置1.在WMware中安装Ubuntu-14.04.32.配置Ubuntu root账号12$ sudo passwd root$ su - root
+3.安装 WMware tool1234567$ mkdir /mnt/cdrom$">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -102,17 +96,14 @@
       
         <p>由于实验需要，这些天尝试安装了gem5到虚拟机中，以下为安装记录。</p>
 <p>实验环境：WMware + Ubuntu-14.04.3-desktop-amd64。</p>
-<p>##虚拟机配置</p>
-<p>###在WMware中安装Ubuntu-14.04.3</p>
-<p>###配置Ubuntu root账号<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo passwd root</div><div class="line">$ su - root</div></pre></td></tr></table></figure></p>
-<p>###安装 WMware tool<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ mkdir /mnt/cdrom</div><div class="line">$ mnt /mnt/cdrom /dev/cdrom</div><div class="line">$ cp /mnt/cdrom/VMwareTools-8.4.6-385536.tar.gz ~/</div><div class="line">$ <span class="built_in">cd</span></div><div class="line">$ tar -xzvf VMwareTools-8.4.6-385536.tar.gz</div><div class="line">$ <span class="built_in">cd</span> vmware-tools-distrib</div><div class="line">$ ./vmware-install.pl</div></pre></td></tr></table></figure></p>
-<p>##安装gem5</p>
-<p><a id="more"></a>#在<!--more-->之前的内容会显示在首页，之后的内容会被隐藏，当游客点击Read more才能看到。</p>
+<h2 id="虚拟机配置"><a href="#虚拟机配置" class="headerlink" title="虚拟机配置"></a>虚拟机配置</h2><h3 id="1-在WMware中安装Ubuntu-14-04-3"><a href="#1-在WMware中安装Ubuntu-14-04-3" class="headerlink" title="1.在WMware中安装Ubuntu-14.04.3"></a>1.在WMware中安装Ubuntu-14.04.3</h3><h3 id="2-配置Ubuntu-root账号"><a href="#2-配置Ubuntu-root账号" class="headerlink" title="2.配置Ubuntu root账号"></a>2.配置Ubuntu root账号</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo passwd root</div><div class="line">$ su - root</div></pre></td></tr></table></figure>
+<h3 id="3-安装-WMware-tool"><a href="#3-安装-WMware-tool" class="headerlink" title="3.安装 WMware tool"></a>3.安装 WMware tool</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ mkdir /mnt/cdrom</div><div class="line">$ mnt /mnt/cdrom /dev/cdrom</div><div class="line">$ cp /mnt/cdrom/VMwareTools-8.4.6-385536.tar.gz ~/</div><div class="line">$ <span class="built_in">cd</span></div><div class="line">$ tar -xzvf VMwareTools-8.4.6-385536.tar.gz</div><div class="line">$ <span class="built_in">cd</span> vmware-tools-distrib</div><div class="line">$ ./vmware-install.pl</div></pre></td></tr></table></figure>
+<h2 id="安装gem5"><a href="#安装gem5" class="headerlink" title="安装gem5"></a>安装gem5</h2><p><a id="more"></a>#在<!--more-->之前的内容会显示在首页，之后的内容会被隐藏，当游客点击Read more才能看到。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/08/my-new-post/" data-id="ciz2sytbm0001oo0gv8pf1kac" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/02/08/my-new-post/" data-id="ciz2t5q700000fc0g8b8ps42p" class="article-share-link">Share</a>
       
       
     </footer>
